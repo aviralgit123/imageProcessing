@@ -12,7 +12,6 @@ const upload = multer({ storage: storage })
 const imageProcessingController=require("../controllers/imageprocessingController");
 router.post("/upload",upload.fields([{ name: 'background_img', maxCount: 1 }, { name: 'front_img', maxCount: 1 }]),imageProcessingController.upload);
 router.get("/image",imageProcessingController.image);
-// router.get("/connect",userController.socketconnection);
 
 
 module.exports=router;
